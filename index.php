@@ -132,7 +132,11 @@ while($rowss=mysqli_fetch_array($rrr)){
   font-weight: weight;
   font-style: normal;"> <?php echo $rowss['name'];?> <span class="mx-4"> <?php echo $rowss['price'];?> RS</span></h5>
 <p><?php echo $rowss['location'];?></p>
-  <a href="form.php"></a>
+<div class="btn-box">
+        <a href="form.php">
+          FORM
+        </a>
+      </div>
     
   </div>
   </div>

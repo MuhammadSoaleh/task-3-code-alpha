@@ -11,9 +11,9 @@ if (isset($_POST['sub'])) {
   $city = $_POST['city'];
   $state = $_POST['state'];
   $zip = $_POST['zip'];
+  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-
-  $sql="INSERT INTO `rigistration`(`firstname`, `lastname`, `email`, `password`, `address_1`, `address_2`, `city`, `state`, `zip`) VALUES ('[$firstname]','[$lastname]','[$email]','[$password]','[$address_1]','[$address_2]','[$city]','[$state]','[$zip]')";
+  $sql="INSERT INTO `rigistration`(`firstname`, `lastname`, `email`, `password`, `address_1`, `address_2`, `city`, `state`, `zip`) VALUES ('$firstname','$lastname','$email','$hashed_password','$address_1','$address_2','$city','$state','$zip')";
   $row = mysqli_query($conn, $sql);
 	if ($row) {
 		echo "<script> alert('submited succesfully') </script>";
