@@ -108,7 +108,8 @@ $conn = new mysqli("localhost", "root", "", "event planner");
         </h2>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3">
+      
+          <div class="container-fluid d-flex flex-wrap ">
           <?php
         // $uid=$_SESSION['id'];
 $sql="SELECT * FROM `category`";
@@ -117,35 +118,26 @@ $rrr=mysqli_query($conn,$sql);
 while($rowss=mysqli_fetch_array($rrr)){
   
 ?>
-           <div class='box display-flex flex-column my-3'>
-           <div >
-  <span  class="rounded-pill text-black bg-body text-center" style="font-family: 'Dancing Script', cursive;
+        <div class="card mx-3" style="width: 18rem;">
+        <div >
+  <span  class="rounded-pill text-white bg-secondary text-center" style="font-family: 'Dancing Script', cursive;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;"><?php echo $rowss['tag'];?></span>
 </div>
-            <a href=''>
-              <div class='img-box'>
-              <img src="<?php echo "images/".$rowss['image'];  ?>" alt=''>
-              </div>
-              <div class='detail-box' style="font-family: 'Dancing Script', cursive;
+  <img src="<?php echo "images/".$rowss['image'];  ?>" class="card-img-top" width="200px" height="250px" alt="...">  
+  <div class="card-body">
+    <h5 class="card-title" style="font-family: 'Dancing Script', cursive;
   font-optical-sizing: auto;
   font-weight: weight;
-  font-style: normal;">
-                <h6>
-                <?php echo $rowss['name'];?>
-                </h6>
-                <h6>
-                  Price
-                  <span>
-                  <?php echo $rowss['price'];?>
-                  </span>
-                </h6>
-              </div>
-             
-            </a>
-          </div> 
-          <?php } ?>
+  font-style: normal;"> <?php echo $rowss['name'];?> <span class="mx-4"> <?php echo $rowss['price'];?> RS</span></h5>
+<p><?php echo $rowss['location'];?></p>
+  <a href="form.php"></a>
+    
+  </div>
+  </div>
+  <?php } ?>
+
         </div>
         <!-- <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
