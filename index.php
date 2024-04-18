@@ -56,10 +56,10 @@ $conn = new mysqli("localhost", "root", "", "event planner");
             </button>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="shop.html">Shop</a>
-                <a href="blog.html">Blog</a>
+                <a href="index.php">Home</a>
+                <!-- <a href="about.html">About</a> -->
+                <a href="logout.php">logout</a>
+                <!-- <a href="blog.html">Blog</a> -->
               </div>
             </div>
           </div>

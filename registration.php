@@ -5,7 +5,7 @@ if (isset($_POST['sub'])) {
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-    $password = "mysecretpassword";
+  
 $hash = password_hash($password, PASSWORD_DEFAULT);
 	$sql="INSERT INTO `event orginizer`(`name`, `email`, `password`) VALUES ('$name', '$email','$hash')"; 
 
@@ -43,6 +43,9 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
 <style>
     ::placeholder ,button{font-family:"Poppins",sans-serif;
         color: #ffc0cb !important;
+    }
+   input[type="submit"]:hover{
+color: #ff3355!important ;
     }
 </style>  
 </head>
